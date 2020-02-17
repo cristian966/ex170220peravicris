@@ -1,0 +1,134 @@
+
+.contenedorgridEnlaces{
+    display: grid; 
+    grid-template-columns: repeat(4, 20%);
+    box-sizing: border-box;
+    gap: 0;
+    background-color: brown;
+    padding: 10px;
+    column-gap:10px;
+    row-gap:15px;
+    justify-content: center;
+    align-items: center;
+    &__elementohijo{
+        background-color: antiquewhite;
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 650px) {
+.contenedorgridEnlaces{
+    display: grid; 
+    grid-template-columns:100%;
+    box-sizing: border-box;
+    gap: 0;
+    background-color: brown;
+    padding: 10px;
+    column-gap:10px;
+    row-gap:15px;
+    justify-content: center;
+    align-items: center;
+    &__elementohijo{
+        background-color: antiquewhite;
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+  }
+
+
+
+%bordes{
+    border: 2px solid black;
+}
+
+  .contenedorDistribucion1peravicris {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    padding: 10px;
+    @extend %bordes;
+    box-sizing: border-box;
+    text-align: center;
+  
+    &__cabecera {
+      grid-column: 1/4;
+      @extend %bordes;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__aside1 {
+      grid-column: 1/2;
+      @extend %bordes;
+      height: 500px;
+    }
+    &__main {
+      grid-column: 2/3;
+      @extend %bordes;
+      height: 500px;
+    }
+    &__aside2 {
+      grid-column: 3/4;
+      @extend %bordes;
+      height: 500px;
+    }
+    &__footer{
+      grid-column: 1/4;
+      @extend %bordes;
+      height: 100px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .contenedorDistribucion1peravicris {
+        display: grid;
+        grid-template-columns:100%;
+        padding: 10px;
+        @extend %bordes;
+        box-sizing: border-box;
+        text-align: center;
+      
+        &__cabecera {
+          grid-column: 1/4;
+          @extend %bordes;
+          height: 200px;
+        }
+        &__aside1 {
+          grid-column: 1/4;
+          @extend %bordes;
+          height: 500px;
+        }
+        &__main {
+          grid-column: 1/4;
+          @extend %bordes;
+          height: 500px;
+        }
+        &__aside2 {
+          grid-column: 1/4;
+          @extend %bordes;
+          height: 500px;
+        }
+        &__footer{
+          grid-column: 1/4;
+          @extend %bordes;
+          height: 200px;
+        }
+      }
+
+}
+
+
+
+
+
+
+
+
+
